@@ -59,6 +59,7 @@ plugins:
             Home: Inicio
             Getting started: Primeros pasos
             Enchantments: Encantamientos
+            Default enchantments: Encantamientos predeterminados
             Creating an enchantment: Crear un encantamiento
             "Modes: BOOKS and VANILLA": "Modos: LIBROS y VANILLA"
             Vanilla enchantments: Encantamientos vanilla
@@ -101,6 +102,7 @@ nav:
   - Home: index.md
   - Getting started: getting-started.md
   - Enchantments:
+      - Default enchantments: enchantments/defaults.md
       - Creating an enchantment: enchantments/creating.md
       - "Modes: BOOKS and VANILLA": enchantments/modes.md
       - Vanilla enchantments: enchantments/vanilla.md

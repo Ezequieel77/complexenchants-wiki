@@ -22,3 +22,12 @@ reparte cada sección en su página y corrige los enlaces:
 
 **Ojo:** volver a ejecutarlo sobrescribe `docs/`. Mientras la documentación se mantenga en los README del
 plugin, edita allí y regenera. Si pasas a editar la wiki directamente, deja de usar el script.
+
+## Encantamientos predeterminados
+
+`docs/enchantments/defaults(.es).md` no sale del README: lo genera `tools/default_enchants.py` a partir de los
+archivos de fábrica del plugin (inglés) y de la carpeta en español:
+
+```
+py tools/default_enchants.py ../ComplexEnchants/core/src/main/resources/defaults ../default/ComplexEnchants docs
+```
