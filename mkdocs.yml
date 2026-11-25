@@ -1,0 +1,125 @@
+# Wiki de ComplexEnchants (MkDocs Material + mkdocs-static-i18n).
+#   Ver en local:  py -m mkdocs serve      → http://127.0.0.1:8000
+#   Comprobar:     py -m mkdocs build --strict   (falla si hay enlaces rotos)
+# Cada página está en dos archivos: pagina.md (inglés) y pagina.es.md (español).
+
+site_name: ComplexEnchants
+site_description: Custom enchantments for Paper, with effects, menus and a shop.
+# Cambia esto por la dirección real cuando la publiques (GitHub Pages: https://<usuario>.github.io/<repositorio>/).
+site_url: https://ezequieel77.github.io/complexenchants-wiki/
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/book-open-page-variant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
+        - locale: es
+          name: Español
+          build: true
+          site_description: Encantamientos personalizados para Paper, con efectos, menús y tienda.
+          nav_translations:
+            Home: Inicio
+            Getting started: Primeros pasos
+            Enchantments: Encantamientos
+            Creating an enchantment: Crear un encantamiento
+            "Modes: BOOKS and VANILLA": "Modos: LIBROS y VANILLA"
+            Vanilla enchantments: Encantamientos vanilla
+            Enchantment slots: Ranuras de encantamiento
+            How enchantments are displayed: Cómo se muestran
+            Menus and shop: Menús y tienda
+            Effects: Efectos
+            Overview: Introducción
+            Effect groups: Grupos de efectos
+            Active skills: Habilidades activas
+            Triggers: Triggers
+            Targets: Targets
+            Conditions: Condiciones
+            Effects reference: Referencia de efectos
+            How effects work: Cómo funcionan
+            Debugging and limitations: Depuración y limitaciones
+            Reference: Referencia
+            PlaceholderAPI placeholders: Placeholders de PlaceholderAPI
+            Commands and permissions: Comandos y permisos
+            API for developers: API para desarrolladores
+            Compatibility and performance: Compatibilidad y rendimiento
+            FAQ: Preguntas frecuentes
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Enchantments:
+      - Creating an enchantment: enchantments/creating.md
+      - "Modes: BOOKS and VANILLA": enchantments/modes.md
+      - Vanilla enchantments: enchantments/vanilla.md
+      - Enchantment slots: enchantments/slots.md
+      - How enchantments are displayed: enchantments/display.md
+      - Menus and shop: menus.md
+  - Effects:
+      - Overview: effects/index.md
+      - Effect groups: effects/groups.md
+      - Active skills: effects/skills.md
+      - Triggers: effects/triggers.md
+      - Targets: effects/targets.md
+      - Conditions: effects/conditions.md
+      - Effects reference: effects/reference.md
+      - How effects work: effects/mechanics.md
+      - Debugging and limitations: effects/debugging.md
+  - Reference:
+      - Commands and permissions: commands.md
+      - PlaceholderAPI placeholders: placeholders.md
+      - API for developers: api.md
+      - Compatibility and performance: compatibility.md
+      - FAQ: faq.md
