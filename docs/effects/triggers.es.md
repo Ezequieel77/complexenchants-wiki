@@ -9,7 +9,7 @@
 | `fall_damage` | recibes daño de caída | daño, cancelable |
 | `kill` | matas algo | víctima, drops, experiencia |
 | `death` | mueres | atacante (si lo hay) |
-| `mine_block` | rompes un bloque | bloque, experiencia, cancelable |
+| `mine_block` | rompes un bloque (solo el que rompes tú: los bloques extra de un área o una veta no lo disparan; sus drops sí pasan por `block_drops`) | bloque, experiencia, cancelable |
 | `block_drops` | un bloque que rompiste suelta sus objetos | bloque, drops |
 | `shoot` | disparas un arco o ballesta | cancelable |
 | `shield_block` | bloqueas con escudo | daño (solo leerlo: el golpe antes del escudo), atacante, cancelable |

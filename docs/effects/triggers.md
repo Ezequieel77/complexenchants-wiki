@@ -9,7 +9,7 @@
 | `fall_damage` | you take fall damage | damage, cancellable |
 | `kill` | you kill something | victim, drops, experience |
 | `death` | you die | attacker (if there is one) |
-| `mine_block` | you break a block | block, experience, cancellable |
+| `mine_block` | you break a block (only the one you break: the extra blocks of an area or a vein don't fire it; their drops do go through `block_drops`) | block, experience, cancellable |
 | `block_drops` | a block you broke drops its items | block, drops |
 | `shoot` | you shoot a bow or crossbow | cancellable |
 | `shield_block` | you block with a shield | damage (read only: the hit before the shield), attacker, cancellable |

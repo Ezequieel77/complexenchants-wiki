@@ -17,7 +17,7 @@ Arguments with a value in brackets are optional; that's their default.
 | `remove_potion` | `potion` | self | Removes that potion effect from the target. |
 | `ignite` | `duration` (s) | victim | |
 | `lightning` | [`damage`: false] | victim | Visual only; with `damage: true` it deals 5 damage to the target only (no fire, nobody else). |
-| `knockback` | [`strength`: 1] | victim | Pushes away from you; negative pulls. |
+| `knockback` | [`strength`: 1], [`vertical`: auto] | victim | Pushes away from you (0.6 per point of strength); negative pulls. `vertical`: how high it lifts them (auto: 0.15–0.3; `0` = flat); it never adds to the lift they already have, such as a hit's. |
 | `bleed` | `damage`, [`interval`: 1] (s), [`times`: 3] | victim | Stops if the target dies. |
 | `set_damage` | `amount` | — | The base damage becomes this; the other damage effects apply after it. |
 | `freeze` | `duration` (s), [`lock`: true] | victim | Frozen like in powder snow: slow and, fully frozen, damage. `lock: true` = maxed for `duration`; `lock: false` = that many seconds of freezing that thaw by themselves (like AE's `SCREEN_FREEZE`). |

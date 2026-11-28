@@ -17,7 +17,7 @@ Los argumentos con un valor entre corchetes son opcionales; ese es su valor por 
 | `remove_potion` | `potion` | self | Quita ese efecto de poción al target. |
 | `ignite` | `duration` (s) | victim | |
 | `lightning` | [`damage`: false] | victim | Solo visual; con `damage: true` hace 5 de daño solo al target (sin fuego ni a nadie más). |
-| `knockback` | [`strength`: 1] | victim | Empuja alejándolo de ti; negativo, lo atrae. |
+| `knockback` | [`strength`: 1], [`vertical`: auto] | victim | Empuja alejándolo de ti (0,6 por punto de fuerza); negativo, lo atrae. `vertical`: cuánto lo levanta (auto: 0,15–0,3; `0` = plano); nunca se suma a lo que ya sube, como el empuje de un golpe. |
 | `bleed` | `damage`, [`interval`: 1] (s), [`times`: 3] | victim | Se para si el target muere. |
 | `set_damage` | `amount` | — | El daño base pasa a ser ese; el resto de efectos de daño se aplican después. |
 | `freeze` | `duration` (s), [`lock`: true] | victim | Congelado como en la nieve en polvo: lento y, del todo congelado, daño. `lock: true` = al máximo durante `duration`; `lock: false` = se le ponen esos segundos de congelación y se descongela solo (como `SCREEN_FREEZE` de AE). |
